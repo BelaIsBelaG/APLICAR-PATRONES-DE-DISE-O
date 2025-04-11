@@ -1,3 +1,6 @@
+/**
+ * Clase principal que simula la ejecución del sistema de pedidos.
+ */
 import java.util.Date;
 
 public class Main {
@@ -15,7 +18,7 @@ public class Main {
                 .agregarImpresion(3, "Blanco y Negro", new Foto("foto_montaña.png"))
                 .build();
 
-        // Mostrar detalles del pedido
+        // Mostrar los detalles del pedidogenerado
         pedido.mostrarPedido();
     }
 }
