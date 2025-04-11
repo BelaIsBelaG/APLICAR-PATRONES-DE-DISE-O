@@ -1,7 +1,14 @@
-//clase abstracta para todos los productos
+/**
+ * Clase abstracta base que define el contrato para todos los productos que pueden
+ * ser incluidos en un pedido. Esta clase utiliza polimorfismo mediante el método
+ * abstracto mostrarDetalles().
+ */
 public abstract class Producto{
-    int numero;
+    int numero; // Número identificador del producto dentro del pedido
 
-//metodo comun que se implementa de manera diferente en cada clase hija
+    /**
+     * Método abstracto que debe ser implementado por todas las subclases
+     * para mostrar los detalles específicos del producto.
+     */
 public abstract void mostrarDetalles();
 }
