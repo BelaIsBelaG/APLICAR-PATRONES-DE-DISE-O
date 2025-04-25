@@ -1,29 +1,26 @@
 /**
- * Clase que representa a un cliente del sistema.
+ * Clase que representa a un cliente.
  */
-public class Cliente{
-
+public class Cliente {
     private String cedula;
     private String nombre;
 
     /**
-     * Constructor para inicializar los datos del cliente.
+     * Constructor del cliente.
      *
-     * @param cedula Cédula del cliente.
+     * @param cedula Número de identificación del cliente.
      * @param nombre Nombre del cliente.
      */
-
     public Cliente(String cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
     }
-   /**
-     * Muestra la información del cliente por consola.
-     */
 
+    /**
+     * Muestra los datos del cliente.
+     */
     public void mostrarCliente() {
-        System.out.println("Cedula: " + cedula);
+        System.out.println("Cédula: " + cedula);
         System.out.println("Nombre: " + nombre);
     }
-
 }

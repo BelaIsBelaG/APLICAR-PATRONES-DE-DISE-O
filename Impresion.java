@@ -1,30 +1,19 @@
-/**
- * Clase concreta que representa un producto del tipo "Impresión".
- * Aplica el principio de composición al incluir un objeto de tipo Foto.
- */
 class Impresion extends Producto {
     String color;
-    Foto foto;
+    Foto[] fotos;
 
-    /**
-     * Constructor para crear una nueva impresión.
-     *
-     * @param numero Número del producto en el pedido.
-     * @param color  Tipo de color de la impresión.
-     * @param foto   Objeto Foto que contiene el archivo a imprimir.
-     */
-    public Impresion(int numero, String color, Foto foto) {
-        this.numero = numero;
+    public Impresion(int numero, String color, Foto[] fotos, double precio) {
+        super(numero, precio);
         this.color = color;
-        this.foto = foto;
+        this.fotos = fotos;
     }
 
-     /**
-     * Muestra los detalles específicos de una impresión.
-     * Implementación concreta del método abstracto.
-     */
     @Override
     public void mostrarDetalles() {
-        System.out.println("Impresión #" + numero + ", Color: " + color + ", Foto: " + foto.fichero);
+        System.out.print("Impresión #" + numero + ", Color: " + color + ", Fotos: ");
+        for (Foto foto : fotos) {
+            System.out.print(foto.fichero + " ");
+        }
+        System.out.println(", Precio: $" + precio);
     }
 }

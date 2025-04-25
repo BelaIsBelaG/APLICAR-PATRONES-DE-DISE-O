@@ -1,22 +1,21 @@
 /**
- * Clase simple que representa una foto digital.
+ * Clase que representa una foto para impresión.
  */
-
 class Foto {
-    String fichero; //Nombre del archivo que representa la imagen
+    String fichero;
+
     /**
-     * Constructor que recibe el nombre del fichero de imagen.
+     * Constructor de la foto.
      *
-     * @param fichero Nombre del archivo de foto.
+     * @param fichero Nombre del archivo de imagen.
      */
     public Foto(String fichero) {
         this.fichero = fichero;
     }
-    
-    /**
-     * Simula la impresión de la foto por consola.
-     */
 
+    /**
+     * Imprime la descripción de la foto.
+     */
     public void imprimir() {
         System.out.println("Imprimiendo foto: " + fichero);
     }

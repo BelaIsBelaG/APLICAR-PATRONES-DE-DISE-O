@@ -1,14 +1,25 @@
+// Producto.java
 /**
- * Clase abstracta base que define el contrato para todos los productos que pueden
- * ser incluidos en un pedido. Esta clase utiliza polimorfismo mediante el método
- * abstracto mostrarDetalles().
+ * Clase abstracta que representa un producto que puede formar parte de un pedido.
  */
-public abstract class Producto{
-    int numero; // Número identificador del producto dentro del pedido
+public abstract class Producto {
+    int numero;     // Número identificador del producto
+    double precio;  // Precio del producto
+
+    public Producto(int numero, double precio) {
+        this.numero = numero;
+        this.precio = precio;
+    }
 
     /**
-     * Método abstracto que debe ser implementado por todas las subclases
-     * para mostrar los detalles específicos del producto.
+     * Devuelve el precio del producto.
      */
-public abstract void mostrarDetalles();
+    public double getPrecio() {
+        return precio;
+    }
+
+    /**
+     * Método abstracto para mostrar los detalles del producto.
+     */
+    public abstract void mostrarDetalles();
 }
