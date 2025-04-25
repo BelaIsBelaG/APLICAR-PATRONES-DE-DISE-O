@@ -6,6 +6,7 @@ class Camara extends Producto {
     String marca;   // Marca de la cámara
     String modelo;  // Modelo de la cámara
 
+    //Método constructor de la clase
     public Camara(int numero, String marca, String modelo, double precio) {
         super(numero, precio);
         this.marca = marca;
